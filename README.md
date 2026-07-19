@@ -8,11 +8,12 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `styles.css`: visual system and responsive design
 - `script.js`: navigation state, mobile menu behavior, and current-year display
 - `assets/`: optimized, original prototype imagery
+- `assets/logo/coiffed-logo-rgb.svg`: approved Coiffed RGB logo from the brand asset package
 
 ## Notes
 
 - Brand tagline: “Where Beauty Meets Belonging.”
-- **Brand asset TODO:** add the approved `Coiffed Logo_RGB.svg` or `Coiffed Logo_RGB.png`, then replace the temporary plain-text labels in the header and footer. Do not recreate the Coiffed wordmark with web text or a similar font.
+- The header and footer use the approved `Coiffed Logo_RGB.svg` asset. The source artwork includes multiple official color treatments; the site selects the gold treatment for the header and the white treatment for the footer without altering the asset.
 - Body and interface text use a Gill Sans-style system stack. Calluna Sans is not bundled or imported because an approved web license/source is not available; headings use a refined system fallback until brand web-font files are provided.
 - Customer, mailing-list, and general inquiries use `hello@coiffedbeauty.com`; vendor partnerships use `vendors@coiffedbeauty.com`.
 - Instagram is confirmed at `https://www.instagram.com/coiffed.beauty/`; Facebook and TikTok remain labeled, non-clickable placeholders until their official URLs are confirmed.

@@ -29,8 +29,8 @@ a { color: inherit; }
 
 .site-header { align-items: center; color: var(--white); display: flex; height: 88px; justify-content: space-between; left: 0; padding-inline: max(1.5rem, 4vw); position: fixed; right: 0; top: 0; transition: background .25s ease, height .25s ease, box-shadow .25s ease; z-index: 50; }
 .site-header.is-scrolled, body.nav-open .site-header { background: rgba(13, 10, 12, .97); box-shadow: 0 1px 0 rgba(255,255,255,.1); height: 72px; }
-/* Temporary plain-text brand labels. Replace with the approved logo asset; do not style these as a recreated wordmark. */
-.brand-mark, .footer-brand { color: var(--champagne); font-family: var(--sans); font-size: .9rem; font-weight: 600; letter-spacing: .22em; line-height: 1; text-decoration: none; text-transform: uppercase; }
+.brand-mark, .footer-brand { align-items: center; display: inline-flex; text-decoration: none; }
+.brand-mark img { height: 60px; width: 199px; }
 .site-nav { align-items: center; display: flex; gap: clamp(1.1rem, 2.5vw, 2.4rem); }
 .site-nav a { align-items: center; color: rgba(255,253,250,.82); display: inline-flex; font-size: .82rem; font-weight: 600; letter-spacing: .08em; min-height: 44px; padding-block: .5rem; text-decoration: none; text-transform: uppercase; }
 .site-nav a:hover, .site-nav a:focus-visible, .site-nav a.is-active { color: var(--champagne); }
@@ -156,7 +156,7 @@ blockquote { border-left: 2px solid var(--gold); color: var(--plum); font-family
 
 .site-footer { background: #090708; color: rgba(255,253,250,.65); padding-block: 2.5rem; }
 .footer-grid { align-items: end; display: grid; gap: clamp(1.5rem, 3vw, 3rem); grid-template-columns: .9fr auto auto 1fr; }
-.footer-brand { font-size: .82rem; }
+.footer-brand img { height: 54px; width: 197px; }
 .footer-grid > div p { font-size: .75rem; letter-spacing: .08em; margin: .25rem 0 0; text-transform: uppercase; }
 .footer-grid nav { display: flex; gap: 1.5rem; }
 .footer-grid nav a { align-items: center; display: inline-flex; font-size: .73rem; letter-spacing: .08em; min-height: 44px; text-decoration: none; text-transform: uppercase; }
@@ -211,6 +211,7 @@ blockquote { border-left: 2px solid var(--gold); color: var(--plum); font-family
 }
 
 @media (max-width: 560px) {
+  .brand-mark img { height: 48px; width: 159px; }
   h1 { font-size: clamp(3.7rem, 17vw, 5rem); }
   h2 { font-size: clamp(3rem, 14vw, 4.2rem); }
   .hero { min-height: 870px; padding-top: 112px; }

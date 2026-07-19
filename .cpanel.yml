@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/h5g4v5j5o9b5/public_html/prototype/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp README.md $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/assets
+    - /bin/cp -R assets $DEPLOYPATH

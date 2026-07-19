@@ -3,176 +3,193 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Coiffed | Beauty, Wigs, Confidence, Belonging</title>
+    <title>Coiffed | Wigs, Beauty &amp; Belonging in Minneapolis</title>
     <meta
       name="description"
-      content="Coiffed is a community-centered beauty boutique in Minneapolis for wigs, beauty products, gifts, guidance, and confidence-centered care."
+      content="Discover Coiffed, a community-centered Minneapolis beauty boutique for wigs, thoughtful guidance, beauty essentials, gifts, and a genuine sense of belonging."
     />
-    <meta property="og:title" content="Coiffed | Minneapolis Beauty Boutique" />
+    <meta name="theme-color" content="#181512" />
+    <link rel="canonical" href="https://coiffedbeauty.com/prototype/" />
+    <meta property="og:title" content="Coiffed | Wigs, Beauty &amp; Belonging in Minneapolis" />
     <meta
       property="og:description"
       content="Beauty is the vehicle. Confidence is the destination. Belonging is the outcome."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coiffedbeauty.com/prototype/" />
+    <meta property="og:image" content="https://coiffedbeauty.com/prototype/assets/hero-community.webp" />
+    <meta property="og:image:alt" content="Friends sharing a warm moment inside a neighborhood beauty boutique." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23181512'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia' font-size='44' fill='%23d6b566'%3EC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="./assets/hero-community.webp" as="image" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Coiffed",
+        "description": "A community-centered beauty boutique for wigs, beauty essentials, gifts, guidance, and belonging.",
+        "url": "https://coiffedbeauty.com/prototype/",
+        "email": "coiffed.unveil@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2325 Hennepin Ave",
+          "addressLocality": "Minneapolis",
+          "addressRegion": "MN",
+          "postalCode": "55405",
+          "addressCountry": "US"
+        }
+      }
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" data-header>
-      <a class="brand-mark" href="#home" aria-label="Coiffed home">
-        <span>Coiffed</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
+      <a class="brand-mark" href="#home" aria-label="Coiffed home">Coiffed</a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#home">Home</a>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
         <a href="#wigs">Wigs</a>
         <a href="#beauty">Beauty</a>
-        <a href="#story">Our Story</a>
-        <a href="#visit">Visit</a>
+        <a href="#story">Our story</a>
+        <a class="nav-cta" href="#visit">Visit Coiffed</a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero page-panel is-active" id="home" data-panel>
+      <section class="hero" id="home" data-section>
         <div class="hero-media" aria-hidden="true">
-          <img src="./assets/wigs-hero-current-site.jpg" alt="" />
-          <div class="hero-wash"></div>
+          <img src="./assets/hero-community.webp" alt="" width="1918" height="820" fetchpriority="high" />
         </div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">Minneapolis beauty boutique</p>
-          <h1>Coiffed</h1>
-          <p class="hero-line">Beauty is the vehicle. Confidence is the destination. Belonging is the outcome.</p>
+        <div class="hero-content shell reveal">
+          <p class="eyebrow light">A beauty boutique in Minneapolis</p>
+          <h1>Beauty that brings you <em>home to yourself.</em></h1>
+          <p class="hero-intro">Explore wigs, beauty, gifts, and thoughtful guidance in a space created for confidence, connection, and you.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#wigs">Explore Wigs</a>
-            <a class="button button-secondary" href="#visit">Plan A Visit</a>
+            <a class="button button-gold" href="#wigs">Find your fit</a>
+            <a class="button button-ghost" href="#visit">Plan your visit</a>
           </div>
+        </div>
+        <a class="scroll-cue" href="#experience" aria-label="Explore the Coiffed experience"><span></span>Discover</a>
+      </section>
+
+      <section class="manifesto" id="experience" data-section aria-labelledby="manifesto-title">
+        <div class="shell manifesto-grid">
+          <div class="manifesto-heading reveal">
+            <p class="eyebrow">The Coiffed experience</p>
+            <h2 id="manifesto-title">More than a beauty stop. <em>A place to belong.</em></h2>
+          </div>
+          <div class="manifesto-copy reveal">
+            <p class="lead">Beauty can open a door—to self-expression, to a fresh beginning, to a conversation you didn’t know you needed.</p>
+            <p>At Coiffed, what happens after that door opens matters most. We’re shaping a neighborhood boutique where every question is welcome and every person can move at their own pace.</p>
+          </div>
+        </div>
+        <div class="shell promise-grid" aria-label="Our promise">
+          <article class="promise-card reveal">
+            <span>01</span><h3>Feel seen</h3><p>Your style, story, texture, and reasons are your own. We begin by listening.</p>
+          </article>
+          <article class="promise-card reveal">
+            <span>02</span><h3>Feel supported</h3><p>Clear, caring guidance replaces pressure—so you can choose with confidence.</p>
+          </article>
+          <article class="promise-card reveal">
+            <span>03</span><h3>Feel connected</h3><p>Come for beauty. Find warmth, conversation, and room to be fully yourself.</p>
+          </article>
         </div>
       </section>
 
-      <section class="page-panel" id="wigs" data-panel>
-        <div class="page-hero">
-          <div class="page-copy reveal">
-            <p class="eyebrow">Wigs & consultations</p>
-            <h2>Find the style that feels like you.</h2>
-            <p>
-              Coiffed is creating a calmer, more personal way to explore wigs in Minneapolis, with thoughtful
-              guidance for fashion, protective styling, hair loss, special occasions, and everyday confidence.
-            </p>
-            <a class="text-link" href="#visit">Ask about consultations</a>
-          </div>
-          <figure class="image-slab reveal">
-            <img src="./assets/wigs-hero-current-site.jpg" alt="A hand styling a soft pink wig in front of wig displays." />
+      <section class="wigs-section" id="wigs" data-section aria-labelledby="wigs-title">
+        <div class="shell editorial-grid">
+          <figure class="editorial-image reveal">
+            <img src="./assets/wig-consultation.webp" width="1448" height="1086" loading="lazy" alt="A guest and boutique guide considering a natural-textured wig together." />
+            <figcaption>Personal guidance. Your pace. Your choice.</figcaption>
           </figure>
-        </div>
-
-        <div class="section-band">
-          <div class="section-intro reveal">
-            <h3>Guidance before overwhelm.</h3>
-            <p>
-              Choosing a wig can be exciting, practical, emotional, or all of those at once. The experience should
-              make room for questions, preferences, comfort, and pace.
-            </p>
-          </div>
-          <div class="service-list">
-            <article class="service-item reveal">
-              <span>01</span>
-              <h4>Human hair</h4>
-              <p>Elevated options for natural movement, styling flexibility, and a more customized feel.</p>
-            </article>
-            <article class="service-item reveal">
-              <span>02</span>
-              <h4>Synthetic styles</h4>
-              <p>Beautiful, practical choices designed for ease, consistency, and everyday wear.</p>
-            </article>
-            <article class="service-item reveal">
-              <span>03</span>
-              <h4>Fit & care support</h4>
-              <p>Help with comfort, styling basics, maintenance, and the details that make a wig feel wearable.</p>
-            </article>
+          <div class="editorial-copy reveal">
+            <p class="eyebrow">Wigs &amp; personal guidance</p>
+            <h2 id="wigs-title">A fit that feels like <em>you.</em></h2>
+            <p class="lead">Choosing a wig can be joyful, practical, emotional—or all three. You deserve an experience that makes room for the whole of it.</p>
+            <p>Whether you’re exploring fashion, protective styling, hair loss, a special occasion, or an everyday change, Coiffed offers a calmer way to find what feels right.</p>
+            <ul class="detail-list">
+              <li><strong>Human hair</strong><span>Natural movement and styling flexibility</span></li>
+              <li><strong>Synthetic styles</strong><span>Beautiful, consistent, easy-to-wear options</span></li>
+              <li><strong>Fit &amp; care guidance</strong><span>Comfort, upkeep, and styling basics</span></li>
+            </ul>
+            <a class="text-link" href="mailto:coiffed.unveil@gmail.com?subject=Coiffed%20wig%20consultation">Ask about a consultation <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
-      <section class="page-panel" id="beauty" data-panel>
-        <div class="editorial-split">
-          <div class="texture-panel reveal" aria-hidden="true">
-            <span class="orbital orbital-one"></span>
-            <span class="orbital orbital-two"></span>
-            <span class="gold-line"></span>
-          </div>
-          <div class="page-copy reveal">
-            <p class="eyebrow">Beauty & gifts</p>
-            <h2>Thoughtful beauty, chosen with care.</h2>
-            <p>
-              Coiffed is preparing a curated selection of beauty essentials, accessories, and gifts that support
-              confidence, routine, expression, and care.
-            </p>
-            <a class="text-link" href="#visit">Ask what is coming</a>
-          </div>
+      <section class="beauty-section" id="beauty" data-section aria-labelledby="beauty-title">
+        <div class="shell beauty-heading reveal">
+          <p class="eyebrow light">Beauty, accessories &amp; gifts</p>
+          <h2 id="beauty-title">Little things. <em>Real lift.</em></h2>
+          <p>Thoughtful finds for the routines, rituals, celebrations, and care that make everyday life feel a little more like yours.</p>
         </div>
-
-        <div class="product-rhythm">
-          <article class="product-line reveal">
-            <h3>Beauty essentials</h3>
-            <p>Everyday products selected to support personal care, polish, and confidence.</p>
+        <div class="shell beauty-grid">
+          <article class="beauty-card beauty-card-main reveal">
+            <span class="card-number">01</span>
+            <div><h3>Everyday beauty</h3><p>Considered essentials for care, polish, play, and personal expression.</p></div>
           </article>
-          <article class="product-line reveal">
-            <h3>Accessories</h3>
-            <p>Finishing pieces for styling, maintenance, protection, and expression.</p>
+          <article class="beauty-card reveal">
+            <span class="card-number">02</span>
+            <div><h3>Finishing touches</h3><p>Accessories that support your style, comfort, and routine.</p></div>
           </article>
-          <article class="product-line reveal">
-            <h3>Gifts</h3>
-            <p>Thoughtful finds for birthdays, celebrations, care packages, and small moments of delight.</p>
+          <article class="beauty-card reveal">
+            <span class="card-number">03</span>
+            <div><h3>Gifts with feeling</h3><p>Small delights for celebrations, care packages, or just because.</p></div>
           </article>
         </div>
       </section>
 
-      <section class="page-panel" id="story" data-panel>
-        <div class="story-wrap">
-          <div class="story-marker reveal">Beauty with a reason</div>
+      <section class="story-section" id="story" data-section aria-labelledby="story-title">
+        <div class="shell story-grid">
+          <div class="story-art reveal" aria-hidden="true"><span>Beauty</span><span>Confidence</span><span>Belonging</span></div>
           <div class="story-copy reveal">
-            <p class="eyebrow">Our story</p>
-            <h2>A boutique built for confidence, care, and belonging.</h2>
-            <p>
-              Coiffed is being shaped around a simple belief: beauty can be practical, expressive, restorative,
-              social, and deeply personal at the same time.
-            </p>
-            <p>
-              The public founder story deserves care and approval before it becomes marketing copy. For now, this
-              prototype keeps the emphasis where it belongs: on the experience Coiffed wants every visitor to feel.
-            </p>
+            <p class="eyebrow">Why Coiffed</p>
+            <h2 id="story-title">The destination was never just <em>the mirror.</em></h2>
+            <p class="lead">Coiffed is rooted in a simple belief: beauty is personal, but it doesn’t have to be lonely.</p>
+            <p>We’re creating the kind of boutique we want in our own neighborhood—one where expertise feels approachable, care feels genuine, and people leave standing a little taller.</p>
+            <blockquote>“Beauty is the vehicle. Confidence is the destination. Belonging is the outcome.”</blockquote>
           </div>
         </div>
       </section>
 
-      <section class="page-panel" id="visit" data-panel>
-        <div class="visit-panel">
+      <section class="visit-section" id="visit" data-section aria-labelledby="visit-title">
+        <div class="shell visit-grid">
           <div class="visit-copy reveal">
-            <p class="eyebrow">Visit Coiffed</p>
-            <h2>Come as you are. Leave with a little more certainty.</h2>
-            <p>
-              Coiffed is located in Minneapolis and is preparing a boutique experience for wigs, beauty, gifts,
-              guidance, and community-centered care.
-            </p>
+            <p class="eyebrow light">Come say hello</p>
+            <h2 id="visit-title">Your chair is waiting.</h2>
+            <p>Find Coiffed in Minneapolis. Questions about wigs, what’s available, or planning a visit? Reach out—we’d love to hear from you.</p>
+            <div class="visit-actions">
+              <a class="button button-gold" href="mailto:coiffed.unveil@gmail.com">Email Coiffed</a>
+              <a class="button button-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=2325+Hennepin+Ave+Minneapolis+MN+55405" target="_blank" rel="noopener">Get directions <span class="sr-only">(opens in a new tab)</span></a>
+            </div>
           </div>
-          <div class="visit-details reveal" aria-label="Contact details">
-            <p><strong>Address</strong><br />2325 Hennepin Ave.<br />Minneapolis, MN 55405</p>
-            <p><strong>Email</strong><br /><a href="mailto:coiffed.unveil@gmail.com">coiffed.unveil@gmail.com</a></p>
-            <p><strong>Hours</strong><br />Coming soon. Confirm before publishing.</p>
-          </div>
+          <address class="visit-card reveal">
+            <div><span>Find us</span><p>2325 Hennepin Ave.<br />Minneapolis, MN 55405</p></div>
+            <div><span>Connect</span><p><a href="mailto:coiffed.unveil@gmail.com">coiffed.unveil@gmail.com</a></p></div>
+            <div><span>Hours</span><p>Opening details coming soon</p></div>
+          </address>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Coiffed</p>
-      <p>Beauty, confidence, belonging. Minneapolis, Minnesota.</p>
+      <div class="shell footer-grid">
+        <div><a class="footer-brand" href="#home">Coiffed</a><p>Beauty. Confidence. Belonging.</p></div>
+        <nav aria-label="Footer navigation"><a href="#wigs">Wigs</a><a href="#beauty">Beauty</a><a href="#story">Our story</a><a href="#visit">Visit</a></nav>
+        <p class="copyright">© <span data-year></span> Coiffed<br />Minneapolis, Minnesota</p>
+      </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

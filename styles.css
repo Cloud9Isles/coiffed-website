@@ -188,6 +188,8 @@ blockquote { border-left: 2px solid var(--gold); color: var(--plum); font-family
 .featured-note-card { display: grid; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: .42fr 1fr; padding-block: clamp(2rem, 5vw, 4rem); }
 .featured-note-number { color: var(--plum); font-size: .72rem; font-weight: 700; letter-spacing: .15em; padding-top: .75rem; }
 .featured-note-card h3 { font-size: clamp(2.7rem, 5.5vw, 5rem); max-width: 800px; }
+.featured-note-card h3 a, .note-card h3 a { text-decoration: none; }
+.featured-note-card h3 a:hover, .featured-note-card h3 a:focus-visible, .note-card h3 a:hover, .note-card h3 a:focus-visible { color: var(--plum); }
 .featured-note-card > div:last-child > p { color: var(--ink-soft); font-family: var(--display); font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.35; max-width: 760px; }
 
 .note-meta { align-items: center; color: var(--plum); display: flex; flex-wrap: wrap; font-size: .68rem; font-weight: 700; gap: .55rem; letter-spacing: .11em; margin-bottom: 1.3rem; text-transform: uppercase; }
@@ -221,8 +223,29 @@ blockquote { border-left: 2px solid var(--gold); color: var(--plum); font-family
 .note-card h3 { font-size: clamp(2rem, 3.6vw, 3.25rem); }
 .note-card > p { color: var(--ink-soft); max-width: 500px; }
 .note-card[hidden], .featured-note-card[hidden] { display: none; }
+.note-read-link { align-items: center; color: var(--plum); display: inline-flex; font-size: .72rem; font-weight: 700; gap: .65rem; letter-spacing: .09em; margin-top: 1.8rem; min-height: 44px; text-decoration: none; text-transform: uppercase; }
+.note-read-link:hover, .note-read-link:focus-visible { color: var(--gold-deep); }
+.note-read-link span { font-size: 1rem; transition: transform .2s ease; }
+.note-read-link:hover span, .note-read-link:focus-visible span { transform: translateX(.25rem); }
+.notes-unavailable { color: var(--ink-soft); padding-block: 2rem; }
 .notes-empty { border: 1px solid var(--line); padding: clamp(2rem, 6vw, 5rem); text-align: center; }
 .notes-empty h3 { font-size: clamp(2rem, 4vw, 3.5rem); }
+
+.note-page .site-header { background: rgba(13,10,12,.97); box-shadow: 0 1px 0 rgba(255,255,255,.1); height: 72px; }
+.note-detail { background: var(--paper); min-height: 75vh; padding-block: clamp(9rem, 15vw, 13rem) clamp(6rem, 10vw, 9rem); }
+.note-detail-shell { max-width: 920px; }
+.note-back-link { align-items: center; color: var(--plum); display: inline-flex; font-size: .72rem; font-weight: 700; gap: .55rem; letter-spacing: .09em; margin-bottom: clamp(3rem, 7vw, 6rem); min-height: 44px; text-decoration: none; text-transform: uppercase; }
+.note-back-link:hover, .note-back-link:focus-visible { color: var(--gold-deep); }
+.note-detail-meta { margin-bottom: 1.8rem; }
+.note-detail h1 { color: var(--ink); font-size: clamp(3.6rem, 8vw, 7rem); max-width: 920px; }
+.note-detail-intro { color: var(--ink-soft); font-family: var(--display); font-size: clamp(1.35rem, 2.5vw, 2rem); line-height: 1.4; max-width: 760px; }
+.note-body { border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 1.08rem; margin-top: clamp(2.5rem, 6vw, 5rem); max-width: 720px; padding-top: clamp(2.5rem, 5vw, 4rem); }
+.note-body p { margin-bottom: 1.6rem; }
+.note-draft-notice { background: var(--cream); border-left: 3px solid var(--gold); margin-top: clamp(2.5rem, 6vw, 5rem); max-width: 720px; padding: clamp(1.5rem, 4vw, 2.5rem); }
+.note-draft-notice .eyebrow { margin-bottom: .7rem; }
+.note-draft-notice p:last-child { color: var(--ink-soft); margin-bottom: 0; }
+.note-detail .note-tags { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.note-detail-footer { border-top: 1px solid var(--line); margin-top: clamp(3rem, 7vw, 6rem); padding-top: 2rem; }
 
 .follow-story { background: var(--plum); color: var(--white); overflow: hidden; padding-block: clamp(6rem, 10vw, 9rem); position: relative; }
 .follow-story::after { border: 1px solid rgba(224,124,178,.34); border-radius: 50%; content: ""; height: 520px; position: absolute; right: -210px; top: -260px; width: 520px; }
@@ -295,6 +318,7 @@ blockquote { border-left: 2px solid var(--gold); color: var(--plum); font-family
   .story-art { aspect-ratio: 1; }
   .notes-hero { min-height: 700px; }
   .featured-note-card h3 { font-size: clamp(2.5rem, 12vw, 3.5rem); }
+  .note-detail h1 { font-size: clamp(3.2rem, 15vw, 4.6rem); }
   .notes-search-field { min-height: 56px; }
   .topic-filters button { flex: 1 1 auto; }
   .footer-grid { grid-template-columns: 1fr; }

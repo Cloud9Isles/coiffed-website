@@ -7,7 +7,10 @@ deployment:
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp notes.html $DEPLOYPATH
+    - /bin/cp note.html $DEPLOYPATH
+    - /bin/cp notes-data.js $DEPLOYPATH
     - /bin/cp notes.js $DEPLOYPATH
+    - /bin/cp note.js $DEPLOYPATH
     - /bin/cp README.md $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/assets
     - /bin/cp -R assets $DEPLOYPATH

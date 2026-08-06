@@ -13,7 +13,7 @@ let activeTopic = "All";
 const hasPublishedBody = (note) =>
   note.status === "published" && Array.isArray(note.body) && note.body.length > 0;
 
-const noteUrl = (note) => `./note.html?note=${encodeURIComponent(note.slug)}`;
+const noteUrl = (note) => note.url;
 
 const noteSearchText = (note) =>
   [note.title, note.excerpt, note.category, ...note.tags].join(" ").toLocaleLowerCase();

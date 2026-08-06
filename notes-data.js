@@ -1,6 +1,7 @@
 window.coiffedNotes = [
   {
     slug: "why-were-building-coiffed",
+    url: "./notes/why-were-building-coiffed.html",
     title: "Why We’re Building Coiffed",
     category: "Owner’s Notes",
     excerpt: "A short note on beauty, confidence, belonging, and why Coiffed is being built with care.",
@@ -12,6 +13,7 @@ window.coiffedNotes = [
   },
   {
     slug: "opening-updates-what-were-working-on-now",
+    url: "./notes/opening-updates-what-were-working-on-now.html",
     title: "Opening Updates: What We’re Working On Now",
     category: "Opening Updates",
     excerpt: "A place to track progress as the boutique, product mix, and community experience come together.",
@@ -23,6 +25,7 @@ window.coiffedNotes = [
   },
   {
     slug: "how-we-think-about-wig-guidance",
+    url: "./notes/how-we-think-about-wig-guidance.html",
     title: "How We Think About Wig Guidance",
     category: "Wigs & Guidance",
     excerpt: "Wig support at Coiffed should feel practical, personal, and never rushed.",
@@ -34,6 +37,7 @@ window.coiffedNotes = [
   },
   {
     slug: "a-note-for-brand-and-vendor-partners",
+    url: "./notes/a-note-for-brand-and-vendor-partners.html",
     title: "A Note for Brand and Vendor Partners",
     category: "Vendor Notes",
     excerpt: "What we look for when something earns a place in the Coiffed experience.",
@@ -45,6 +49,7 @@ window.coiffedNotes = [
   },
   {
     slug: "follow-the-story-as-coiffed-comes-to-life",
+    url: "./notes/follow-the-story-as-coiffed-comes-to-life.html",
     title: "Follow the Story as Coiffed Comes to Life",
     category: "Community",
     excerpt: "Where to find updates, behind-the-scenes progress, product arrivals, and owner notes.",
@@ -56,6 +61,7 @@ window.coiffedNotes = [
   },
   {
     slug: "what-makes-a-beauty-find-worth-sharing",
+    url: "./notes/what-makes-a-beauty-find-worth-sharing.html",
     title: "What Makes a Beauty Find Worth Sharing",
     category: "Beauty Finds",
     excerpt: "A look at the usefulness, point of view, and everyday delight we hope a Coiffed beauty find can bring.",
@@ -67,6 +73,7 @@ window.coiffedNotes = [
   },
   {
     slug: "scalp-and-skin-care-starting-with-the-basics",
+    url: "./notes/scalp-and-skin-care-starting-with-the-basics.html",
     title: "Scalp and Skin Care: Starting with the Basics",
     category: "Scalp & Skin Care",
     excerpt: "A simple starting point for thinking about routines, product questions, and when personal guidance matters.",

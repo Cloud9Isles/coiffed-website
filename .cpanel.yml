@@ -14,3 +14,5 @@ deployment:
     - /bin/cp README.md $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/assets
     - /bin/cp -R assets $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/notes
+    - /bin/cp -R notes $DEPLOYPATH

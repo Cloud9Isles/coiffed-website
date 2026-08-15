@@ -7,9 +7,9 @@ const metaDescription = document.querySelector("meta[name='description']");
 const openGraphTitle = document.querySelector("meta[property='og:title']");
 const openGraphDescription = document.querySelector("meta[property='og:description']");
 const openGraphUrl = document.querySelector("meta[property='og:url']");
+const productionOrigin = window.COIFFED_SITE?.productionOrigin || window.location.origin;
 
-const hasPublishedBody = (item) =>
-  item.status === "published" && Array.isArray(item.body) && item.body.length > 0;
+const hasPublishedBody = window.isCoiffedNotePublished || (() => false);
 
 const renderMeta = (item) => `
   <div class="note-meta note-detail-meta">
@@ -28,7 +28,7 @@ const renderTags = (item) => `
 
 const updateMetadata = (item) => {
   const title = `${item.title} | Notes from Coiffed`;
-  const url = `https://coiffedbeauty.com/prototype/note.html?note=${encodeURIComponent(item.slug)}`;
+  const url = new URL(item.url, `${productionOrigin}/`).href;
   document.title = title;
   metaDescription.setAttribute("content", item.excerpt);
   openGraphTitle.setAttribute("content", title);

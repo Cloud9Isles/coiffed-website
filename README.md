@@ -14,6 +14,8 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `notes-data.js`: note titles, slugs, metadata, publication status, and approved bodies
 - `notes.js`: archive rendering, search, and topic filtering
 - `note.js`: note detail rendering, metadata, and unavailable-note handling
+- `sitemap.xml`: generated production sitemap containing only indexable public pages
+- `scripts/build-sitemap.mjs`: dependency-free sitemap generator and consistency check
 - `assets/`: optimized prototype imagery
 - `assets/logo/coiffed-logo-rgb.svg`: approved Coiffed RGB logo from the brand asset package
 
@@ -24,8 +26,9 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - Body and interface text use a Gill Sans-style system stack. Calluna Sans is not bundled or imported because an approved web license/source is not available; headings use a refined system fallback until brand web-font files are provided.
 - Customer, mailing-list, and general inquiries use `hello@coiffedbeauty.com`; vendor partnerships use `vendors@coiffedbeauty.com`.
 - The footer links to Coiffed on Instagram, Facebook, and TikTok with accessible labels and recognizable icons.
-- Notes are managed in `notes-data.js`, with a matching HTML file in `notes/`. Keep each filename and URL unchanged after sharing it. Add approved full text to the corresponding HTML page and to the data entry, then change `status` from `draft` to `published`. A note is treated as published only when both conditions are met.
-- Current Notes entries are draft previews. Their complete bodies require Joshua or Brinn’s approval before publication.
+- Notes are managed in `notes-data.js`, with a matching HTML file in `notes/`. Keep each filename and URL unchanged after sharing it. A note appears in the archive only when its status is `published` and every body paragraph is a non-empty string.
+- To publish a Note, obtain Joshua or Brinn’s approval, add the approved full text to its data entry and matching HTML page, change its status to `published`, remove the draft page’s `noindex` directive and notice, then run `node scripts/build-sitemap.mjs`. Verify the result with `node scripts/build-sitemap.mjs --check`.
+- Current Notes entries remain drafts. Their summaries and reserved pages stay in the repository, but draft cards are excluded from the public archive and draft pages are excluded from the sitemap.
 - The prototype imagery is AI-generated and should be replaced with original Coiffed photography before the site becomes the production experience. The hero intentionally uses a people-free boutique still life; the wig-display concept is explicitly labeled in the page.
 - `assets/coiffed-wig-display-concept.webp` is generated, conceptual, and temporary. It is a people-free visualization of the planned wig display, not store photography or a depiction of actual inventory.
 - Copy avoids unconfirmed claims about opening status, inventory, services, hours, and founder details.

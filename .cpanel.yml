@@ -12,7 +12,7 @@ deployment:
     - /bin/cp notes-data.js $DEPLOYPATH
     - /bin/cp notes.js $DEPLOYPATH
     - /bin/cp note.js $DEPLOYPATH
-    - /bin/cp README.md $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/assets
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/notes

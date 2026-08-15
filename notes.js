@@ -7,11 +7,14 @@ const topicFilters = document.querySelector("#topic-filters");
 const resultsStatus = document.querySelector("#notes-results");
 const emptyState = document.querySelector("#notes-empty");
 const resetButton = document.querySelector("[data-reset-notes]");
+const emptyEyebrow = document.querySelector("[data-empty-eyebrow]");
+const emptyTitle = document.querySelector("[data-empty-title]");
 
 let activeTopic = "All";
 
-const hasPublishedBody = (note) =>
-  note.status === "published" && Array.isArray(note.body) && note.body.length > 0;
+const hasPublishedBody = window.isCoiffedNotePublished || (() => false);
+
+const publishedNotes = coiffedNotes.filter(hasPublishedBody);
 
 const noteUrl = (note) => note.url;
 
@@ -23,7 +26,6 @@ const noteMeta = (note) => `
     <span>${note.category}</span>
     <span aria-hidden="true">·</span>
     <time datetime="${note.date}">${note.dateLabel}</time>
-    ${hasPublishedBody(note) ? "" : '<span class="note-sample">Draft preview</span>'}
   </div>
 `;
 
@@ -35,14 +37,14 @@ const noteTags = (note) => `
 
 const noteLink = (note) => `
   <a class="note-read-link" href="${noteUrl(note)}">
-    ${hasPublishedBody(note) ? "Read full note" : "View draft preview"}
+    Read full note
     <span aria-hidden="true">→</span>
   </a>
 `;
 
 const renderFeatured = (note) => {
   if (!note) {
-    featuredNote.innerHTML = '<p class="notes-unavailable">No notes are available yet.</p>';
+    featuredNote.innerHTML = '<p class="notes-unavailable">Published notes are coming soon.</p>';
     return;
   }
 
@@ -78,7 +80,7 @@ const renderArchive = (notes) => {
 };
 
 const renderTopics = () => {
-  const topics = ["All", ...new Set(coiffedNotes.map((note) => note.category))];
+  const topics = ["All", ...new Set(publishedNotes.map((note) => note.category))];
   topicFilters.innerHTML = topics
     .map(
       (topic) => `
@@ -105,8 +107,18 @@ const filterNotes = () => {
 
   clearSearch.hidden = query.length === 0;
   emptyState.hidden = visibleCount !== 0;
-  resultsStatus.textContent =
-    visibleCount === 1 ? "Showing 1 note." : `Showing ${visibleCount} notes.`;
+  if (publishedNotes.length === 0) {
+    emptyEyebrow.textContent = "Notes coming soon";
+    emptyTitle.textContent = "There aren’t any published notes yet.";
+    resetButton.hidden = true;
+    resultsStatus.textContent = "No published notes yet.";
+  } else {
+    emptyEyebrow.textContent = "No matching notes";
+    emptyTitle.textContent = "Try another word or topic.";
+    resetButton.hidden = false;
+    resultsStatus.textContent =
+      visibleCount === 1 ? "Showing 1 note." : `Showing ${visibleCount} notes.`;
+  }
 };
 
 const resetNotes = () => {
@@ -119,8 +131,8 @@ const resetNotes = () => {
   searchInput.focus();
 };
 
-renderFeatured(coiffedNotes[0]);
-renderArchive(coiffedNotes.slice(1));
+renderFeatured(publishedNotes[0]);
+renderArchive(publishedNotes.slice(1));
 renderTopics();
 filterNotes();
 

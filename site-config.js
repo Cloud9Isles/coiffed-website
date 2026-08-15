@@ -1,3 +1,8 @@
+window.COIFFED_SITE = Object.freeze({
+  productionOrigin: "https://coiffedbeauty.com",
+  indexedPages: Object.freeze(["/", "/notes.html"])
+});
+
 /*
  * Confirmed service and operating information for the Coiffed prototype.
  *

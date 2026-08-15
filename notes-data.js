@@ -1,3 +1,9 @@
+window.isCoiffedNotePublished = (note) =>
+  note.status === "published" &&
+  Array.isArray(note.body) &&
+  note.body.length > 0 &&
+  note.body.every((paragraph) => typeof paragraph === "string" && paragraph.trim().length > 0);
+
 window.coiffedNotes = [
   {
     slug: "why-were-building-coiffed",

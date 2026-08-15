@@ -6,6 +6,7 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp site-config.js $DEPLOYPATH
     - /bin/cp notes.html $DEPLOYPATH
     - /bin/cp note.html $DEPLOYPATH
     - /bin/cp notes-data.js $DEPLOYPATH

@@ -10,6 +10,7 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `note.html`: legacy query-string note route retained for backward compatibility
 - `styles.css`: visual system and responsive design
 - `script.js`: navigation state, mobile menu behavior, and current-year display
+- `site-config.js`: single source of truth for services, prices, timing, policies, hours, booking mode, turnaround language, inventory caveats, and the configurable Square URL
 - `notes-data.js`: note titles, slugs, metadata, publication status, and approved bodies
 - `notes.js`: archive rendering, search, and topic filtering
 - `note.js`: note detail rendering, metadata, and unavailable-note handling
@@ -27,4 +28,5 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - Current Notes entries are draft previews. Their complete bodies require Joshua or Brinn’s approval before publication.
 - The prototype imagery is AI-generated and should be replaced with original Coiffed photography before the site becomes the production experience. The hero intentionally uses a people-free boutique still life; the consultation concept image is explicitly labeled in the page.
 - Copy avoids unconfirmed claims about opening status, inventory, services, hours, and founder details.
+- Appointment and operating information is managed only in `site-config.js`. Set `booking.squareUrl` there after Square provides the confirmed public booking URL. Items in `requiredDecisions` must be resolved before adding related policy language to the site.
 - No hosting or DNS changes are made by this prototype.

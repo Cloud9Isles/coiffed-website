@@ -4,6 +4,32 @@ const nav = document.querySelector(".site-nav");
 const navLinks = [...nav.querySelectorAll("a[href^='#']")];
 const sections = [...document.querySelectorAll("[data-section]")];
 const operations = window.COIFFED_OPERATIONS;
+const wigsTarget = document.querySelector("#wigs");
+
+const showWigsAtTop = () => {
+  if (!wigsTarget) return;
+  const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = "auto";
+  wigsTarget.scrollIntoView({ block: "start", behavior: "auto" });
+  document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  wigsTarget.focus({ preventScroll: true });
+  header.classList.toggle("is-scrolled", window.scrollY > 24);
+};
+
+const handleWigsHash = () => {
+  if (window.location.hash === "#wigs") window.requestAnimationFrame(showWigsAtTop);
+};
+
+document.querySelectorAll('a[href="#wigs"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (window.location.hash !== "#wigs") return;
+    event.preventDefault();
+    showWigsAtTop();
+  });
+});
+
+window.addEventListener("hashchange", handleWigsHash);
+window.addEventListener("pageshow", handleWigsHash);
 
 const appendTextElement = (parent, tagName, className, content) => {
   const element = document.createElement(tagName);

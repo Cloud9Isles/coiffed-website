@@ -14,7 +14,7 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `notes-data.js`: note titles, slugs, metadata, publication status, and approved bodies
 - `notes.js`: archive rendering, search, and topic filtering
 - `note.js`: note detail rendering, metadata, and unavailable-note handling
-- `assets/`: optimized, original prototype imagery
+- `assets/`: optimized prototype imagery
 - `assets/logo/coiffed-logo-rgb.svg`: approved Coiffed RGB logo from the brand asset package
 
 ## Notes
@@ -26,7 +26,8 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - The footer links to Coiffed on Instagram, Facebook, and TikTok with accessible labels and recognizable icons.
 - Notes are managed in `notes-data.js`, with a matching HTML file in `notes/`. Keep each filename and URL unchanged after sharing it. Add approved full text to the corresponding HTML page and to the data entry, then change `status` from `draft` to `published`. A note is treated as published only when both conditions are met.
 - Current Notes entries are draft previews. Their complete bodies require Joshua or Brinn’s approval before publication.
-- The prototype imagery is AI-generated and should be replaced with original Coiffed photography before the site becomes the production experience. The hero intentionally uses a people-free boutique still life; the consultation concept image is explicitly labeled in the page.
+- The prototype imagery is AI-generated and should be replaced with original Coiffed photography before the site becomes the production experience. The hero intentionally uses a people-free boutique still life; the wig-display concept is explicitly labeled in the page.
+- `assets/coiffed-wig-display-concept.webp` is generated, conceptual, and temporary. It is a people-free visualization of the planned wig display, not store photography or a depiction of actual inventory.
 - Copy avoids unconfirmed claims about opening status, inventory, services, hours, and founder details.
 - Appointment and operating information is managed only in `site-config.js`. Set `booking.squareUrl` there after Square provides the confirmed public booking URL. Items in `requiredDecisions` must be resolved before adding related policy language to the site.
 - No hosting or DNS changes are made by this prototype.

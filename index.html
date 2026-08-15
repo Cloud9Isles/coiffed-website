@@ -23,7 +23,7 @@
     <!-- Temporary abstract favicon. Replace it with an approved favicon derived from the official Coiffed logo asset. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0a0c'/%3E%3Ccircle cx='24' cy='28' r='16' fill='%233e0f32'/%3E%3Ccircle cx='41' cy='26' r='12' fill='%23e07cb2' fill-opacity='.8'/%3E%3Ccircle cx='36' cy='43' r='8' fill='%23fbc926' fill-opacity='.9'/%3E%3C/svg%3E" />
     <link rel="preload" href="./assets/hero-boutique-v2.webp" as="image" fetchpriority="high" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260815d" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -64,9 +64,12 @@
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" data-header>
-      <a class="brand-mark" href="#home">
-        <img src="./assets/logo/coiffed-logo-rgb.svg#svgView(viewBox(245,35,365,110))" width="199" height="60" alt="Coiffed" />
-      </a>
+      <div class="brand-lockup">
+        <a class="brand-mark" href="#home">
+          <img src="./assets/logo/coiffed-logo-rgb.svg#svgView(viewBox(245,35,365,110))" width="199" height="60" alt="Coiffed" />
+        </a>
+        <p class="header-location">A beauty boutique in Minneapolis</p>
+      </div>
       <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -87,9 +90,7 @@
           <img src="./assets/hero-boutique-v2.webp" alt="" width="1905" height="825" fetchpriority="high" />
         </div>
         <div class="hero-content shell reveal">
-          <p class="hero-location">A beauty boutique in Minneapolis</p>
-          <p class="hero-tagline">Where Beauty Meets Belonging</p>
-          <h1>Beauty that brings you <em>home to yourself.</em></h1>
+          <h1 class="hero-title">Where Beauty Meets Belonging.</h1>
           <p class="hero-intro">Explore wigs, beauty, and gifts, with thoughtful guidance when you want it and room to browse when you don’t.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="#wigs">Find your fit</a>
@@ -124,11 +125,11 @@
         </div>
       </section>
 
-      <section class="wigs-section" id="wigs" data-section aria-labelledby="wigs-title">
+      <section class="wigs-section" id="wigs" data-section aria-labelledby="wigs-title" tabindex="-1">
         <div class="shell editorial-grid">
           <figure class="editorial-image reveal">
-            <img src="./assets/wig-consultation.webp" width="1448" height="1086" loading="lazy" alt="Concept image of natural-textured wigs and consultation tools arranged in a warm boutique setting." />
-            <figcaption><strong>Personal guidance. Your pace. Your choice.</strong><span>Concept image for prototype use</span></figcaption>
+            <img src="./assets/coiffed-wig-display-concept.webp" width="1600" height="900" loading="lazy" alt="Planned boutique wall with eleven individually lit pedestals displaying blond, brunette, and curly glueless wigs on neutral forms." />
+            <figcaption>Concept rendering of the planned Coiffed wig display.</figcaption>
           </figure>
           <div class="editorial-copy reveal">
             <p class="eyebrow">Wigs &amp; personal guidance</p>
@@ -215,8 +216,7 @@
           <div class="story-copy reveal">
             <p class="eyebrow">Why Coiffed</p>
             <h2 id="story-title">The destination was never just <em>the mirror.</em></h2>
-            <p class="lead">Coiffed is rooted in a simple belief: beauty is personal, but it doesn’t have to be lonely.</p>
-            <p>We’re creating the kind of boutique we want in our own neighborhood, where expertise feels approachable and care feels genuine. The goal is simple: help people leave knowing what works for them.</p>
+            <p class="lead">At Coiffed, we work with love and care to provide every customer with a safe, relaxing experience. Our hope is that Coiffed will be a place where people from all walks of life can come to feel welcome, cared for, and seen.</p>
             <blockquote>“Beauty is the vehicle. Confidence is the destination. Belonging is the outcome.”</blockquote>
           </div>
         </div>
@@ -275,6 +275,6 @@
     </footer>
 
     <script src="./site-config.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="./script.js?v=20260815d" defer></script>
   </body>
 </html>

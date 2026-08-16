@@ -34,4 +34,10 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - Copy avoids unconfirmed claims about opening status, inventory, services, hours, and founder details.
 - Appointment and operating information is managed only in `site-config.js`. Set `booking.squareUrl` there after Square provides the confirmed public booking URL. Items in `requiredDecisions` must be resolved before adding related policy language to the site.
 - Run `npm test` for dependency-free checks of page structure, accessibility essentials, responsive CSS, operational content, and production configuration.
+
+## Preview-to-production workflow
+
+The checked-in cPanel deployment file is preview-only: when the configured cPanel Git deployment is triggered, `.cpanel.yml` copies the static pages, scripts, sitemap, Notes, and assets into `/public_html/prototype/`. That makes the prototype available for review without changing the production document root. Production promotion is deliberately not encoded in this repository, so it remains a separate, authorized cPanel step after review and approval.
+
+To shorten that path safely, keep the preview deployment as the approval gate, require `npm test` on the exact commit being reviewed, and promote that same immutable commit or build artifact rather than copying edited files by hand. A separately authorized production deployment configuration can then reuse the tested file manifest after approval. This reduces duplicate checking and file drift without changing hosting, DNS, or production from this branch.
 - No hosting or DNS changes are made by this prototype.

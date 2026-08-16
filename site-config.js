@@ -14,8 +14,8 @@ window.COIFFED_SITE = Object.freeze({
 window.COIFFED_OPERATIONS = Object.freeze({
   opening: {
     label: "Opening status",
-    status: "Preparing to open",
-    detail: "Coiffed is preparing to open at 2325 Hennepin Ave. Follow along or join the mailing list for the confirmed opening date."
+    status: "Coming soon.",
+    detail: "Coiffed is coming soon to 2325 Hennepin Ave. Follow along or join the mailing list for opening updates."
   },
   booking: {
     mode: "Square Appointments",
@@ -27,34 +27,37 @@ window.COIFFED_OPERATIONS = Object.freeze({
   },
   specialist: "Brinn will initially be Coiffed’s only wig specialist.",
   hours: {
-    walkIns: "Walk-ins will be welcome during posted hours. Exact hours are still being finalized.",
-    provisionalPattern: "Provisional pattern: Tuesday through Saturday daytime, with selected evening appointments and no Sunday or Monday walk-in shopping."
+    schedule: [
+      { days: "Tuesday-Saturday", time: "9 AM-4 PM" },
+      { days: "Sunday", time: "By appointment" },
+      { days: "Monday", time: "Closed" }
+    ]
   },
   inventory: "Coiffed plans to carry glueless wigs from multiple brands, in a range of colors and price points. Exact availability has not yet been verified.",
   services: [
     {
-      id: "initial-wig-consultation",
-      name: "Initial Wig Consultation",
-      price: "$50 total",
-      customerDuration: "45 minutes",
-      description: "One-on-one time to talk through fit, comfort, style, care, and what you want from a wig.",
-      details: [
-        "The full consultation fee is credited toward a qualifying wig purchase.",
-        "A $25 deposit is collected at booking through Square Appointments, with the remaining $25 due at the appointment.",
-        "The $25 deposit functions as the missed-appointment or late-cancellation charge."
-      ]
+      id: "la-petite",
+      name: "La Petite",
+      price: "$35",
+      description: "A focused wig-care service. Coiffed will assess the wig and confirm suitable care at drop-off."
     },
     {
-      id: "wig-care-drop-off",
-      name: "Wig Care Drop-Off",
-      price: "$35",
-      customerDuration: "15-minute customer drop-off",
-      internalDuration: "Up to 60 minutes of internal work",
-      description: "Deep cleaning and styling when appropriate for the wig’s fiber, construction, and condition.",
-      details: [
-        "Not every wig can be serviced. Suitability will be assessed at drop-off.",
-        "Target turnaround is two business days, with final timing confirmed at drop-off."
-      ]
+      id: "classique",
+      name: "Classique",
+      price: "$55",
+      description: "The classic wig-care service, with cleaning and styling when appropriate for the wig’s fiber, construction, and condition."
+    },
+    {
+      id: "supreme",
+      name: "Suprême",
+      price: "$85",
+      description: "A more extensive wig-care service. Coiffed will assess suitability and confirm the appropriate work at drop-off."
+    },
+    {
+      id: "le-renouveau",
+      name: "Le Renouveau",
+      price: "$115+",
+      description: "The renewal wig-care service, starting at $115. Coiffed will assess the wig and confirm suitable work and final pricing at drop-off."
     }
   ],
   requiredDecisions: [
@@ -63,7 +66,6 @@ window.COIFFED_OPERATIONS = Object.freeze({
     "Refund rules",
     "Minimum qualifying wig purchase",
     "Consultation-credit transferability",
-    "Exact operating hours",
     "Official Square Appointments URL"
   ]
 });

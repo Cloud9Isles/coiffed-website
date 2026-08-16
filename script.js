@@ -53,21 +53,13 @@ const renderOperations = () => {
 
     const summary = document.createElement("dl");
     summary.className = "service-summary";
-    [["Fee", service.price], ["Appointment time", service.customerDuration]].forEach(([label, value]) => {
+    [["Price", service.price]].forEach(([label, value]) => {
       appendTextElement(summary, "dt", "", label);
       appendTextElement(summary, "dd", "", value);
     });
-    if (service.internalDuration) {
-      appendTextElement(summary, "dt", "", "Service time");
-      appendTextElement(summary, "dd", "", service.internalDuration);
-    }
     card.append(summary);
 
     appendTextElement(card, "p", "service-description", service.description);
-    const details = document.createElement("ul");
-    details.className = "service-details";
-    service.details.forEach((detail) => appendTextElement(details, "li", "", detail));
-    card.append(details);
     serviceList.append(card);
   });
 
@@ -76,12 +68,15 @@ const renderOperations = () => {
   document.querySelector("[data-opening-status]").textContent = operations.opening.status;
   document.querySelector("[data-opening-detail]").textContent = operations.opening.detail;
   document.querySelector("[data-specialist-copy]").textContent = operations.specialist;
-  document.querySelector("[data-hours-copy]").textContent = operations.hours.walkIns;
-  document.querySelector("[data-hours-pattern]").textContent = operations.hours.provisionalPattern;
+  const hoursList = document.querySelector("[data-hours-list]");
+  operations.hours.schedule.forEach(({ days, time }) => {
+    appendTextElement(hoursList, "dt", "", days);
+    appendTextElement(hoursList, "dd", "", time);
+  });
   document.querySelector("[data-inventory-copy]").textContent = operations.inventory;
   document.querySelector("[data-visit-booking]").textContent = `${operations.booking.mode}; official booking link to come.`;
-  document.querySelector("[data-visit-opening]").textContent = `${operations.opening.status}. ${operations.opening.detail}`;
-  document.querySelector("[data-visit-hours]").textContent = `${operations.hours.walkIns} ${operations.hours.provisionalPattern}`;
+  document.querySelector("[data-visit-opening]").textContent = `${operations.opening.status} ${operations.opening.detail}`;
+  document.querySelector("[data-visit-hours]").textContent = operations.hours.schedule.map(({ days, time }) => `${days}: ${time}`).join("; ");
 
   const hasSquareUrl = Boolean(operations.booking.squareUrl);
   const bookingLink = document.createElement("a");

@@ -10,7 +10,7 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `note.html`: legacy query-string note route retained for backward compatibility
 - `styles.css`: visual system and responsive design
 - `script.js`: navigation state, mobile menu behavior, and current-year display
-- `site-config.js`: single source of truth for services, prices, timing, policies, hours, booking mode, turnaround language, inventory caveats, and the configurable Square URL
+- `site-config.js`: single source of truth for opening status, services, prices, timing, policies, hours, booking mode, turnaround language, inventory caveats, and the configurable Square URL
 - `notes-data.js`: note titles, slugs, metadata, publication status, and approved bodies
 - `notes.js`: archive rendering, search, and topic filtering
 - `note.js`: note detail rendering, metadata, and unavailable-note handling
@@ -33,4 +33,5 @@ This is a lightweight static prototype for Coiffed, a community-centered beauty 
 - `assets/coiffed-wig-display-concept.webp` is generated, conceptual, and temporary. It is a people-free visualization of the planned wig display, not store photography or a depiction of actual inventory.
 - Copy avoids unconfirmed claims about opening status, inventory, services, hours, and founder details.
 - Appointment and operating information is managed only in `site-config.js`. Set `booking.squareUrl` there after Square provides the confirmed public booking URL. Items in `requiredDecisions` must be resolved before adding related policy language to the site.
+- Run `npm test` for dependency-free checks of page structure, accessibility essentials, responsive CSS, operational content, and production configuration.
 - No hosting or DNS changes are made by this prototype.

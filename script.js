@@ -72,11 +72,15 @@ const renderOperations = () => {
   });
 
   document.querySelector("[data-booking-copy]").textContent = `Appointments will be managed through ${operations.booking.mode}.`;
+  document.querySelector("[data-opening-label]").textContent = operations.opening.label;
+  document.querySelector("[data-opening-status]").textContent = operations.opening.status;
+  document.querySelector("[data-opening-detail]").textContent = operations.opening.detail;
   document.querySelector("[data-specialist-copy]").textContent = operations.specialist;
   document.querySelector("[data-hours-copy]").textContent = operations.hours.walkIns;
   document.querySelector("[data-hours-pattern]").textContent = operations.hours.provisionalPattern;
   document.querySelector("[data-inventory-copy]").textContent = operations.inventory;
   document.querySelector("[data-visit-booking]").textContent = `${operations.booking.mode}; official booking link to come.`;
+  document.querySelector("[data-visit-opening]").textContent = `${operations.opening.status}. ${operations.opening.detail}`;
   document.querySelector("[data-visit-hours]").textContent = `${operations.hours.walkIns} ${operations.hours.provisionalPattern}`;
 
   const hasSquareUrl = Boolean(operations.booking.squareUrl);

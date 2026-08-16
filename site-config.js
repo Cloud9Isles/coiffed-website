@@ -12,6 +12,11 @@ window.COIFFED_SITE = Object.freeze({
  * fabricated booking link.
  */
 window.COIFFED_OPERATIONS = Object.freeze({
+  opening: {
+    label: "Opening status",
+    status: "Preparing to open",
+    detail: "Coiffed is preparing to open at 2325 Hennepin Ave. Follow along or join the mailing list for the confirmed opening date."
+  },
   booking: {
     mode: "Square Appointments",
     squareUrl: "",

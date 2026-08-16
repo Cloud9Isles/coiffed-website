@@ -122,7 +122,8 @@ em { color: var(--plum); font-weight: 400; }
 .service-description { color: rgba(255,253,250,.88); font-family: var(--display); font-size: 1.3rem; line-height: 1.35; }
 .service-details { color: rgba(255,253,250,.74); margin: 1.5rem 0 0; padding-left: 1.2rem; }
 .service-details li { margin-bottom: .7rem; padding-left: .25rem; }
-.appointment-operations { border: 1px solid rgba(255,255,255,.24); display: grid; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: clamp(3rem, 7vw, 6rem); padding: clamp(1.5rem, 4vw, 3.5rem); }
+.appointment-operations { border: 1px solid rgba(255,255,255,.24); display: grid; gap: clamp(2rem, 5vw, 5rem); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: clamp(3rem, 7vw, 6rem); padding: clamp(1.5rem, 4vw, 3.5rem); }
+.appointment-hours { grid-column: 1 / -1; }
 .appointment-operations p:not(.eyebrow) { color: rgba(255,253,250,.75); }
 .appointment-operations .button { margin-top: .75rem; }
 .booking-status { color: var(--champagne); display: block; font-size: .7rem; font-weight: 700; letter-spacing: .08em; margin-top: .8rem; text-transform: uppercase; }

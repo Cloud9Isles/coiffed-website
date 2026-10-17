@@ -71,12 +71,12 @@ const renderOperations = () => {
     serviceList.append(card);
   });
 
-  document.querySelector("[data-booking-copy]").textContent = `Appointments will be managed through ${operations.booking.mode}.`;
+  document.querySelector("[data-booking-copy]").textContent = `Appointments are managed through ${operations.booking.mode}.`;
   document.querySelector("[data-specialist-copy]").textContent = operations.specialist;
   document.querySelector("[data-hours-copy]").textContent = operations.hours.walkIns;
   document.querySelector("[data-hours-pattern]").textContent = operations.hours.provisionalPattern;
   document.querySelector("[data-inventory-copy]").textContent = operations.inventory;
-  document.querySelector("[data-visit-booking]").textContent = `${operations.booking.mode}; official booking link to come.`;
+  document.querySelector("[data-visit-booking]").textContent = operations.booking.squareUrl ? "Book an appointment using our online Square booking page." : `${operations.booking.mode}; official booking link to come.`;
   document.querySelector("[data-visit-hours]").textContent = `${operations.hours.walkIns} ${operations.hours.provisionalPattern}`;
 
   const hasSquareUrl = Boolean(operations.booking.squareUrl);

@@ -14,7 +14,7 @@ window.COIFFED_SITE = Object.freeze({
 window.COIFFED_OPERATIONS = Object.freeze({
   booking: {
     mode: "Square Appointments",
-    squareUrl: "",
+    squareUrl: "https://app.squareup.com/appointments/book/axpcis3j7a0uju/L1HGB1YAGWK8A/start",
     activeLabel: "Book with Square",
     fallbackUrl: "mailto:hello@coiffedbeauty.com?subject=Coiffed%20appointment%20question",
     fallbackLabel: "Ask about an appointment",
@@ -58,7 +58,6 @@ window.COIFFED_OPERATIONS = Object.freeze({
     "Refund rules",
     "Minimum qualifying wig purchase",
     "Consultation-credit transferability",
-    "Exact operating hours",
-    "Official Square Appointments URL"
+    "Exact operating hours"
   ]
 });
